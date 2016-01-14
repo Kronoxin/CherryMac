@@ -112,6 +112,7 @@
 		4588A4B81BDE76080097FBE2 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
 		458900041C08EB81005DD974 /* Ejercicio20.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio20.cpp; sourceTree = "<group>"; };
 		45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bus Driver.cpp"; sourceTree = "<group>"; };
+		45CC00721C47F49F00CEAE13 /* Varillas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Varillas.h; sourceTree = "<group>"; };
 		45D112701BFA3EE900681843 /* grafo10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grafo10.txt; sourceTree = "<group>"; };
 		45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio4.cpp; sourceTree = "<group>"; };
 		45D47CEB1BCE3DDF00C93194 /* TreeMap_AVL_Mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_AVL_Mod.h; sourceTree = "<group>"; };
@@ -246,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */,
+				45CC00721C47F49F00CEAE13 /* Varillas.h */,
 			);
 			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
