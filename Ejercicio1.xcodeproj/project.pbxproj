@@ -7,7 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450358511BE111A600ED1CDA /* Ejercicio8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358501BE111A600ED1CDA /* Ejercicio8.cpp */; };
+		450358531BE11DCA00ED1CDA /* Ejercicio9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358521BE11DCA00ED1CDA /* Ejercicio9.cpp */; };
+		450358571BE12E0C00ED1CDA /* Ejercicio10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358561BE12E0C00ED1CDA /* Ejercicio10.cpp */; };
+		450361051BD2DA46004B5FCE /* Ejercicio5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450361021BD2DA46004B5FCE /* Ejercicio5.cpp */; };
+		45059F561C05B5460070F0AB /* Ejercicio16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F551C05B5460070F0AB /* Ejercicio16.cpp */; };
+		45059F581C05C2060070F0AB /* Ejercicio17.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F571C05C2060070F0AB /* Ejercicio17.cpp */; };
+		45059F5A1C061A440070F0AB /* Ejercicio18.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F591C061A440070F0AB /* Ejercicio18.cpp */; };
+		45059F5D1C08BADF0070F0AB /* ConjuntosDisjuntos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F5B1C08BADF0070F0AB /* ConjuntosDisjuntos.cpp */; };
+		45059F661C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F651C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp */; };
+		45059F691C08DE3B0070F0AB /* Ejercicio19.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45059F681C08DE3B0070F0AB /* Ejercicio19.cpp */; };
+		4518CA811BDAA11B00CA0AD5 /* Ejercicio7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4518CA801BDAA11B00CA0AD5 /* Ejercicio7.cpp */; };
+		451BD2151BD7747C00CBB0A9 /* Ejercicio6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 451BD2141BD7747C00CBB0A9 /* Ejercicio6.cpp */; };
+		452795CB1BFCD0650031E8A4 /* Ejercicio13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452795CA1BFCD0650031E8A4 /* Ejercicio13.cpp */; };
+		452795CD1C027D640031E8A4 /* Ejercicio14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452795CC1C027D640031E8A4 /* Ejercicio14.cpp */; };
 		452BD9581BC4FF1200413B8B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452BD9571BC4FF1200413B8B /* main.cpp */; };
+		454B6A951C29500600435A41 /* Hardwood Species.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A941C29500600435A41 /* Hardwood Species.cpp */; };
+		454B6A981C296B7600435A41 /* Commandos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A971C296B7600435A41 /* Commandos.cpp */; };
+		454B6A9A1C2975C100435A41 /* Unique Snowflakes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A991C2975C100435A41 /* Unique Snowflakes.cpp */; };
+		4555E7C41C18801300F93997 /* Ejercicio21.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4555E7C31C18801300F93997 /* Ejercicio21.cpp */; };
+		4555E7C61C19F9A800F93997 /* Ejercicio23.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4555E7C51C19F9A800F93997 /* Ejercicio23.cpp */; };
+		4555E7C81C1B09F900F93997 /* Ejercicio24.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4555E7C71C1B09F900F93997 /* Ejercicio24.cpp */; };
+		4555E7CA1C1B11AB00F93997 /* Ejercicio25.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4555E7C91C1B11AB00F93997 /* Ejercicio25.cpp */; };
+		4555E7CD1C21582D00F93997 /* Ejercicio26.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */; };
+		4559D4041BC52927005722B6 /* Ejericio2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4559D4021BC52927005722B6 /* Ejericio2.cpp */; };
+		4559D4071BC7CFAF005722B6 /* Ejercicio3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4559D4061BC7CFAF005722B6 /* Ejercicio3.cpp */; };
+		45807A551BEA5D3800B28E68 /* Ejercicio11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45807A541BEA5D3800B28E68 /* Ejercicio11.cpp */; };
+		45807A5A1BEA5E0D00B28E68 /* Grafo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45807A561BEA5E0D00B28E68 /* Grafo.cpp */; };
+		45807A5B1BEA5E0D00B28E68 /* GrafoDirigido.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45807A581BEA5E0D00B28E68 /* GrafoDirigido.cpp */; };
+		45807A5E1BF38DF800B28E68 /* Ejercicio12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45807A5D1BF38DF800B28E68 /* Ejercicio12.cpp */; };
+		458096861C0367280064C1C9 /* Ejercicio15.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458096841C0367280064C1C9 /* Ejercicio15.cpp */; };
+		458900051C08EB81005DD974 /* Ejercicio20.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458900041C08EB81005DD974 /* Ejercicio20.cpp */; };
+		45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */; };
+		45D47CEA1BCE3B2A00C93194 /* Ejercicio4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +55,66 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		450358501BE111A600ED1CDA /* Ejercicio8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio8.cpp; sourceTree = "<group>"; };
+		450358521BE11DCA00ED1CDA /* Ejercicio9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio9.cpp; sourceTree = "<group>"; };
+		450358541BE122C900ED1CDA /* bancoPajaros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bancoPajaros.h; sourceTree = "<group>"; };
+		450358561BE12E0C00ED1CDA /* Ejercicio10.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio10.cpp; sourceTree = "<group>"; };
+		450361021BD2DA46004B5FCE /* Ejercicio5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ejercicio5.cpp; path = Ejer5/Ejercicio5.cpp; sourceTree = "<group>"; };
+		450361031BD2DA46004B5FCE /* TreeMap_AVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeMap_AVL.h; path = Ejer5/TreeMap_AVL.h; sourceTree = "<group>"; };
+		450361041BD2DA46004B5FCE /* TreeMapPalabra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeMapPalabra.h; path = Ejer5/TreeMapPalabra.h; sourceTree = "<group>"; };
+		45059F551C05B5460070F0AB /* Ejercicio16.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio16.cpp; sourceTree = "<group>"; };
+		45059F571C05C2060070F0AB /* Ejercicio17.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio17.cpp; sourceTree = "<group>"; };
+		45059F591C061A440070F0AB /* Ejercicio18.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio18.cpp; sourceTree = "<group>"; };
+		45059F5B1C08BADF0070F0AB /* ConjuntosDisjuntos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConjuntosDisjuntos.cpp; sourceTree = "<group>"; };
+		45059F5C1C08BADF0070F0AB /* ConjuntosDisjuntos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConjuntosDisjuntos.h; sourceTree = "<group>"; };
+		45059F601C08C63F0070F0AB /* ConjuntosDisjuntosMod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConjuntosDisjuntosMod.h; sourceTree = "<group>"; };
+		45059F651C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConjuntosDisjuntosMod.cpp; sourceTree = "<group>"; };
+		45059F681C08DE3B0070F0AB /* Ejercicio19.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio19.cpp; sourceTree = "<group>"; };
+		4518CA801BDAA11B00CA0AD5 /* Ejercicio7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio7.cpp; sourceTree = "<group>"; };
+		451BD2141BD7747C00CBB0A9 /* Ejercicio6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio6.cpp; sourceTree = "<group>"; };
+		452795C41BFC7D8C0031E8A4 /* ArbolBipartito.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArbolBipartito.h; sourceTree = "<group>"; };
+		452795C51BFC8EB40031E8A4 /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
+		452795C61BFC8EEB0031E8A4 /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		452795C71BFC8F090031E8A4 /* Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exceptions.h; sourceTree = "<group>"; };
+		452795C81BFCCE4F0031E8A4 /* GrafoDirigidoValorado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrafoDirigidoValorado.h; sourceTree = "<group>"; };
+		452795C91BFCCE4F0031E8A4 /* GrafoValorado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrafoValorado.h; sourceTree = "<group>"; };
+		452795CA1BFCD0650031E8A4 /* Ejercicio13.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio13.cpp; sourceTree = "<group>"; };
+		452795CC1C027D640031E8A4 /* Ejercicio14.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio14.cpp; sourceTree = "<group>"; };
+		452795CE1C027D830031E8A4 /* Manchas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manchas.h; sourceTree = "<group>"; };
+		452795CF1C027E3B0031E8A4 /* Matriz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matriz.h; sourceTree = "<group>"; };
 		452BD9541BC4FF1200413B8B /* Ejercicio1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ejercicio1; sourceTree = BUILT_PRODUCTS_DIR; };
 		452BD9571BC4FF1200413B8B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		452BD9611BC4FF8E00413B8B /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
+		452BD9621BC4FF8E00413B8B /* TreeMap_AVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_AVL.h; sourceTree = "<group>"; };
+		452BD9631BC4FF8E00413B8B /* TreeMap_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_RB.h; sourceTree = "<group>"; };
+		454B6A941C29500600435A41 /* Hardwood Species.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Hardwood Species.cpp"; sourceTree = "<group>"; };
+		454B6A971C296B7600435A41 /* Commandos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Commandos.cpp; sourceTree = "<group>"; };
+		454B6A991C2975C100435A41 /* Unique Snowflakes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Unique Snowflakes.cpp"; sourceTree = "<group>"; };
+		4555E7C31C18801300F93997 /* Ejercicio21.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio21.cpp; sourceTree = "<group>"; };
+		4555E7C51C19F9A800F93997 /* Ejercicio23.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio23.cpp; sourceTree = "<group>"; };
+		4555E7C71C1B09F900F93997 /* Ejercicio24.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio24.cpp; sourceTree = "<group>"; };
+		4555E7C91C1B11AB00F93997 /* Ejercicio25.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio25.cpp; sourceTree = "<group>"; };
+		4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio26.cpp; sourceTree = "<group>"; };
+		4559D4021BC52927005722B6 /* Ejericio2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejericio2.cpp; sourceTree = "<group>"; };
+		4559D4051BC5833B005722B6 /* TreeMapRango.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMapRango.h; sourceTree = "<group>"; };
+		4559D4061BC7CFAF005722B6 /* Ejercicio3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio3.cpp; sourceTree = "<group>"; };
+		45807A541BEA5D3800B28E68 /* Ejercicio11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio11.cpp; sourceTree = "<group>"; };
+		45807A561BEA5E0D00B28E68 /* Grafo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grafo.cpp; sourceTree = "<group>"; };
+		45807A571BEA5E0D00B28E68 /* Grafo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grafo.h; sourceTree = "<group>"; };
+		45807A581BEA5E0D00B28E68 /* GrafoDirigido.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GrafoDirigido.cpp; sourceTree = "<group>"; };
+		45807A591BEA5E0D00B28E68 /* GrafoDirigido.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrafoDirigido.h; sourceTree = "<group>"; };
+		45807A5C1BEA662700B28E68 /* ArbolLibre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArbolLibre.h; sourceTree = "<group>"; };
+		45807A5D1BF38DF800B28E68 /* Ejercicio12.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio12.cpp; sourceTree = "<group>"; };
+		45807A5F1BF39EAF00B28E68 /* Arborescencia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arborescencia.h; sourceTree = "<group>"; };
+		458096841C0367280064C1C9 /* Ejercicio15.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio15.cpp; sourceTree = "<group>"; };
+		458096871C03674B0064C1C9 /* ManchasCrecientes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManchasCrecientes.h; sourceTree = "<group>"; };
+		4588A4B61BDE75600097FBE2 /* IndexPQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPQ.h; sourceTree = "<group>"; };
+		4588A4B81BDE76080097FBE2 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		458900041C08EB81005DD974 /* Ejercicio20.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio20.cpp; sourceTree = "<group>"; };
+		45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bus Driver.cpp"; sourceTree = "<group>"; };
+		45D112701BFA3EE900681843 /* grafo10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grafo10.txt; sourceTree = "<group>"; };
+		45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio4.cpp; sourceTree = "<group>"; };
+		45D47CEB1BCE3DDF00C93194 /* TreeMap_AVL_Mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_AVL_Mod.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +128,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450358551BE12DF500ED1CDA /* Tema 3 - Grafos */ = {
+			isa = PBXGroup;
+			children = (
+				45059F651C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp */,
+				45059F5B1C08BADF0070F0AB /* ConjuntosDisjuntos.cpp */,
+				45059F5C1C08BADF0070F0AB /* ConjuntosDisjuntos.h */,
+				452795CF1C027E3B0031E8A4 /* Matriz.h */,
+				452795C81BFCCE4F0031E8A4 /* GrafoDirigidoValorado.h */,
+				452795C91BFCCE4F0031E8A4 /* GrafoValorado.h */,
+				452795C71BFC8F090031E8A4 /* Exceptions.h */,
+				452795C61BFC8EEB0031E8A4 /* Hash.h */,
+				452795C51BFC8EB40031E8A4 /* HashMap.h */,
+				45D112701BFA3EE900681843 /* grafo10.txt */,
+				45807A561BEA5E0D00B28E68 /* Grafo.cpp */,
+				45807A571BEA5E0D00B28E68 /* Grafo.h */,
+				45807A581BEA5E0D00B28E68 /* GrafoDirigido.cpp */,
+				45807A591BEA5E0D00B28E68 /* GrafoDirigido.h */,
+				450358561BE12E0C00ED1CDA /* Ejercicio10.cpp */,
+				45807A541BEA5D3800B28E68 /* Ejercicio11.cpp */,
+				45807A5C1BEA662700B28E68 /* ArbolLibre.h */,
+				45807A5D1BF38DF800B28E68 /* Ejercicio12.cpp */,
+				45807A5F1BF39EAF00B28E68 /* Arborescencia.h */,
+				452795C41BFC7D8C0031E8A4 /* ArbolBipartito.h */,
+				452795CA1BFCD0650031E8A4 /* Ejercicio13.cpp */,
+				452795CC1C027D640031E8A4 /* Ejercicio14.cpp */,
+				452795CE1C027D830031E8A4 /* Manchas.h */,
+				458096841C0367280064C1C9 /* Ejercicio15.cpp */,
+				458096871C03674B0064C1C9 /* ManchasCrecientes.h */,
+				45059F551C05B5460070F0AB /* Ejercicio16.cpp */,
+				45059F571C05C2060070F0AB /* Ejercicio17.cpp */,
+				45059F591C061A440070F0AB /* Ejercicio18.cpp */,
+				45059F601C08C63F0070F0AB /* ConjuntosDisjuntosMod.h */,
+			);
+			name = "Tema 3 - Grafos";
+			sourceTree = "<group>";
+		};
+		45059F671C08DE1A0070F0AB /* Tema 4 - Voraces */ = {
+			isa = PBXGroup;
+			children = (
+				45059F681C08DE3B0070F0AB /* Ejercicio19.cpp */,
+				458900041C08EB81005DD974 /* Ejercicio20.cpp */,
+				4555E7C31C18801300F93997 /* Ejercicio21.cpp */,
+				4555E7C51C19F9A800F93997 /* Ejercicio23.cpp */,
+				4555E7C71C1B09F900F93997 /* Ejercicio24.cpp */,
+				4555E7C91C1B11AB00F93997 /* Ejercicio25.cpp */,
+			);
+			name = "Tema 4 - Voraces";
+			sourceTree = "<group>";
+		};
+		451BD2131BD7742700CBB0A9 /* Tema 2 - Monticulos */ = {
+			isa = PBXGroup;
+			children = (
+				4588A4B81BDE76080097FBE2 /* PriorityQueue.h */,
+				4588A4B61BDE75600097FBE2 /* IndexPQ.h */,
+				451BD2141BD7747C00CBB0A9 /* Ejercicio6.cpp */,
+				4518CA801BDAA11B00CA0AD5 /* Ejercicio7.cpp */,
+				450358501BE111A600ED1CDA /* Ejercicio8.cpp */,
+				450358521BE11DCA00ED1CDA /* Ejercicio9.cpp */,
+				450358541BE122C900ED1CDA /* bancoPajaros.h */,
+			);
+			name = "Tema 2 - Monticulos";
+			sourceTree = "<group>";
+		};
 		452BD94B1BC4FF1200413B8B = {
 			isa = PBXGroup;
 			children = (
+				454B6A961C29689800435A41 /* AdaByron */,
+				4555E7CB1C21581200F93997 /* Tema 5 - Programación dinámica */,
+				45059F671C08DE1A0070F0AB /* Tema 4 - Voraces */,
+				450358551BE12DF500ED1CDA /* Tema 3 - Grafos */,
+				451BD2131BD7742700CBB0A9 /* Tema 2 - Monticulos */,
 				452BD9561BC4FF1200413B8B /* Ejercicio1 */,
 				452BD9551BC4FF1200413B8B /* Products */,
 			);
@@ -57,9 +215,39 @@
 		452BD9561BC4FF1200413B8B /* Ejercicio1 */ = {
 			isa = PBXGroup;
 			children = (
+				450361021BD2DA46004B5FCE /* Ejercicio5.cpp */,
+				450361031BD2DA46004B5FCE /* TreeMap_AVL.h */,
+				450361041BD2DA46004B5FCE /* TreeMapPalabra.h */,
+				45D47CEB1BCE3DDF00C93194 /* TreeMap_AVL_Mod.h */,
+				4559D4051BC5833B005722B6 /* TreeMapRango.h */,
+				452BD9611BC4FF8E00413B8B /* BinTree.h */,
+				452BD9621BC4FF8E00413B8B /* TreeMap_AVL.h */,
+				452BD9631BC4FF8E00413B8B /* TreeMap_RB.h */,
 				452BD9571BC4FF1200413B8B /* main.cpp */,
+				4559D4021BC52927005722B6 /* Ejericio2.cpp */,
+				4559D4061BC7CFAF005722B6 /* Ejercicio3.cpp */,
+				45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */,
 			);
 			path = Ejercicio1;
+			sourceTree = "<group>";
+		};
+		454B6A961C29689800435A41 /* AdaByron */ = {
+			isa = PBXGroup;
+			children = (
+				454B6A941C29500600435A41 /* Hardwood Species.cpp */,
+				454B6A971C296B7600435A41 /* Commandos.cpp */,
+				454B6A991C2975C100435A41 /* Unique Snowflakes.cpp */,
+				45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */,
+			);
+			name = AdaByron;
+			sourceTree = "<group>";
+		};
+		4555E7CB1C21581200F93997 /* Tema 5 - Programación dinámica */ = {
+			isa = PBXGroup;
+			children = (
+				4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */,
+			);
+			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +306,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4555E7CA1C1B11AB00F93997 /* Ejercicio25.cpp in Sources */,
+				45059F5D1C08BADF0070F0AB /* ConjuntosDisjuntos.cpp in Sources */,
+				45D47CEA1BCE3B2A00C93194 /* Ejercicio4.cpp in Sources */,
+				454B6A951C29500600435A41 /* Hardwood Species.cpp in Sources */,
+				45807A5A1BEA5E0D00B28E68 /* Grafo.cpp in Sources */,
+				452795CD1C027D640031E8A4 /* Ejercicio14.cpp in Sources */,
+				454B6A981C296B7600435A41 /* Commandos.cpp in Sources */,
+				4555E7C81C1B09F900F93997 /* Ejercicio24.cpp in Sources */,
+				4555E7C41C18801300F93997 /* Ejercicio21.cpp in Sources */,
+				4559D4041BC52927005722B6 /* Ejericio2.cpp in Sources */,
+				45059F561C05B5460070F0AB /* Ejercicio16.cpp in Sources */,
+				45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */,
+				450358571BE12E0C00ED1CDA /* Ejercicio10.cpp in Sources */,
+				458900051C08EB81005DD974 /* Ejercicio20.cpp in Sources */,
+				452795CB1BFCD0650031E8A4 /* Ejercicio13.cpp in Sources */,
+				4555E7C61C19F9A800F93997 /* Ejercicio23.cpp in Sources */,
+				450358531BE11DCA00ED1CDA /* Ejercicio9.cpp in Sources */,
+				45059F661C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp in Sources */,
+				45807A5B1BEA5E0D00B28E68 /* GrafoDirigido.cpp in Sources */,
+				451BD2151BD7747C00CBB0A9 /* Ejercicio6.cpp in Sources */,
+				450361051BD2DA46004B5FCE /* Ejercicio5.cpp in Sources */,
+				45059F691C08DE3B0070F0AB /* Ejercicio19.cpp in Sources */,
+				45059F581C05C2060070F0AB /* Ejercicio17.cpp in Sources */,
+				45807A551BEA5D3800B28E68 /* Ejercicio11.cpp in Sources */,
+				450358511BE111A600ED1CDA /* Ejercicio8.cpp in Sources */,
+				4555E7CD1C21582D00F93997 /* Ejercicio26.cpp in Sources */,
+				45059F5A1C061A440070F0AB /* Ejercicio18.cpp in Sources */,
+				454B6A9A1C2975C100435A41 /* Unique Snowflakes.cpp in Sources */,
+				45807A5E1BF38DF800B28E68 /* Ejercicio12.cpp in Sources */,
 				452BD9581BC4FF1200413B8B /* main.cpp in Sources */,
+				4518CA811BDAA11B00CA0AD5 /* Ejercicio7.cpp in Sources */,
+				458096861C0367280064C1C9 /* Ejercicio15.cpp in Sources */,
+				4559D4071BC7CFAF005722B6 /* Ejercicio3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +455,7 @@
 				452BD95D1BC4FF1200413B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
