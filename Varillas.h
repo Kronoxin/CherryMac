@@ -22,7 +22,7 @@ public:
         combinaciones = std::vector<int> (L+1, 0);
         precios = std::vector<int> (L+1, infinidad);
         numMinVarillas[0] = 0;
-        combinaciones[0] = 0;
+        combinaciones[0] = 1;
         precios[0] = 0;
         
         calcularNumMinVarillas(varillas, nVarillas, L, numMinVarillas);
@@ -118,13 +118,12 @@ private:
     
     // combinaciones(i,j) = numero de formas de sumar la longitud j con varillas de l0....li.
     //
-    //  combinaciones(0,0) = 0;
+    //  combinaciones(0,0) = 1;
     //  combinaciones(0,j) = 0;
-    //  combinaciones(i,0) = 0;
+    //  combinaciones(i,0) = 1;
     //
     //  combinaciones(i,j) = combinaciones( i-1, j)                             si li > j.
-    //  combinaciones(i,j) = combinaciones( i-1, j) + combinaciones(i-1, j-li)  si li < j.
-    //  combinaciones(i,j) = combinaciones( i-1, j) + 1                         si li = j.
+    //  combinaciones(i,j) = combinaciones( i-1, j) + combinaciones(i-1, j-li)  si li <= j.
     //
     
     void calcularCombinaciones(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion)
@@ -133,9 +132,9 @@ private:
         {
             for (int j = L; j >= 1 ; j--)
             {
-                if (v[i]  == j)
-                    solucion[j]++;
-                else if (v[i] < j)
+                //if (v[i]  == j)
+                //    solucion[j]++;
+                if (v[i] <= j)
                     solucion[j]= solucion[j] + solucion[j-v[i]];
                 
             }
