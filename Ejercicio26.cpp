@@ -21,11 +21,13 @@ bool resuelveCaso()
     
     std::cin >> nVarillas;      //leemos el numero de varillas
     
+    if(!std::cin)               // si no tenemos entrada, terminamos
+        return false;
+
+    
     std::vector<int> varillas(nVarillas+1,0);
     std::vector<int> costes(nVarillas+1,0);
     
-    if(!std::cin)               // si no tenemos entrada, terminamos
-        return false;
     
     std::cin >> longitudFinal;  //longitud total alcanzable
     

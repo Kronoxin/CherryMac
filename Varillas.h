@@ -101,35 +101,17 @@ private:
     //  varillas(0,L) = inf;
     //  varillas(l,o)= 0;
     //
-    //  varillas(i,j) = varillas(i-1,j) si l > j;
-    //  varillas(i,j) = min(varillas(i-1,j) , varillas(i-1, j-l)) si l<=j
+    //  varillas(i,j) = varillas(i-1,j)                             si l > j;
+    //  varillas(i,j) = min(varillas(i-1,j) , varillas(i-1, j-l))   si l<=j
     //
 
     void calcularNumMinVarillas(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion)
     {
-        Matriz<int> m(nVarillas+1,L+1,0);
-        
-        for(int i = 1; i <= L;i++)
-        {
-            m[0][i]= infinidad;
-            
-        }
-        
+    
         for (int i = 1; i <= nVarillas; i++)
-        {
-            for (int j = 1; j <= L ; j++)
-            {
-                if(v[i] > j)
-                {
-                    m[i][j] = m[i-1][j];
-                }
-                else{
-                    m[i][j]= std::min(m[i-1][j], m[i-1][j-v[i]]+1);
-                }
-                if (solucion[j] > m[i][j])
-                    solucion[j] = m[i][j];
-            }
-        }
+            for (int j = L; j >= 1 ; j--)
+                if(v[i] <= j)
+                    solucion[j]= std::min(solucion[j], solucion[j-v[i]]+1);
     }
     
     
@@ -140,63 +122,51 @@ private:
     //  combinaciones(0,j) = 0;
     //  combinaciones(i,0) = 0;
     //
+    //  combinaciones(i,j) = combinaciones( i-1, j)                             si li > j.
+    //  combinaciones(i,j) = combinaciones( i-1, j) + combinaciones(i-1, j-li)  si li < j.
+    //  combinaciones(i,j) = combinaciones( i-1, j) + 1                         si li = j.
+    //
+    
     void calcularCombinaciones(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion)
     {
-        Matriz<int> m(nVarillas+1,L+1,0);
-        
         for (int i = 1; i <= nVarillas; i++)
         {
-            for (int j = 1; j <= L ; j++)
+            for (int j = L; j >= 1 ; j--)
             {
-                if(v[i] > j)
-                    m[i][j] = m[i-1][j];
-                else if (v[i]  == j)
-                    m[i][j]= m[i-1][j]+1;
-                else
-                    m[i][j]= m[i-1][j] + m[i-1][j-v[i]];
+                if (v[i]  == j)
+                    solucion[j]++;
+                else if (v[i] < j)
+                    solucion[j]= solucion[j] + solucion[j-v[i]];
                 
-                if (solucion[j] < m[i][j])
-                    solucion[j] = m[i][j];
             }
         }
     }
     
     
-    // combinaciones(i,j) = numero de formas de sumar la longitud j con varillas de l0....li.
+    //  costes(i,j) = numero de formas de sumar la longitud j con varillas de l0....li.
     //
-    //  combinaciones(0,0) = 0;
-    //  combinaciones(0,j) = 0;
-    //  combinaciones(i,0) = 0;
+    //  costes(0,0) = 0;
+    //  costes(0,j) = 0;
+    //  costes(i,0) = 0;
+    //
+    //  costes(i,j) = costes( i-1, j)                                       si li > j.
+    //  costes(i,j) = min( p[i] , costes( i-1, j) )                         si li = j.
+    //  costes(i,j) = min( p[i] + costes( i-1, j-li) , costes( i-1, j) )    si li < j.
     //
     void calcularPrecios(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion,std::vector<int> &costes)
     {
-        Matriz<int> m(nVarillas+1,L+1,0);
-        for(int i = 1; i <= L;i++)
-        {
-            m[0][i]= infinidad;
-            
-        }
-        
+
         for (int i = 1; i <= nVarillas; i++)
         {
-            for (int j = 1; j <= L ; j++)
+            for (int j = L; j >= 1 ; j--)
             {
-                if(v[i] > j)
-                    m[i][j] = m[i-1][j];
                 
-                else if( v[i] == j)
-                {
-                    m[i][j]= std::min(costes[i],m[i-1][j]);
-                }
-                else
-                {
-                    m[i][j] = std::min(costes[i] + m[i-1][j-v[i]],m[i-1][j]);
-                }
+               if( v[i] == j)
+                   solucion[j]= std::min(costes[i], solucion[j]);
                 
+               else if (v[i] < j)
+                   solucion[j] = std::min(costes[i] + solucion[j-v[i]], solucion[j]);
                 
-                
-                if (solucion[j] > m[i][j])
-                    solucion[j] = m[i][j];
             }
         }
     }
