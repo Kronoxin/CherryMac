@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 #include "Matriz.h"
-
+/*
 void imprime(const Matriz<int> &a,int nPoblados){
     
     for (int i = 0 ; i< nPoblados ; i++)
@@ -90,3 +90,4 @@ bool resuelveCaso()
  while(resuelveCaso());
  return 0;
  }
+*/

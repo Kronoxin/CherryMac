@@ -21,10 +21,12 @@ public:
         numMinVarillas = std::vector<int> (L+1, infinidad);
         combinaciones = std::vector<int> (L+1, 0);
         precios = std::vector<int> (L+1, infinidad);
+        posibles = std::vector<bool>(L+1,false);
         numMinVarillas[0] = 0;
         combinaciones[0] = 1;
         precios[0] = 0;
         
+        calcularPosibles(varillas, nVarillas, L, posibles);
         calcularNumMinVarillas(varillas, nVarillas, L, numMinVarillas);
         calcularCombinaciones(varillas, nVarillas, L, combinaciones);
         calcularPrecios(varillas, nVarillas, L, precios, costes);
@@ -36,11 +38,8 @@ public:
     {
         if (longitud > combinaciones.size()-1)
             throw std::invalid_argument("La longitud requerida no ha sido previamente calculada.");
-        
-        if(numMinVarillas[longitud] == infinidad)
-            return false;
         else
-            return true;
+            return posibles[longitud];
     }
     
     int numCombinaciones(int longitud)
@@ -74,6 +73,7 @@ private:
     std::vector<int> numMinVarillas;
     std::vector<int> combinaciones;
     std::vector<int> precios;
+    std::vector<bool> posibles;
     
     void imprimeMatriz(Matriz<int> &m){
         for(int i = 0; i < m.numfils() ;i++){
@@ -94,6 +94,30 @@ private:
         
         std::cout << "]\n";
         
+    }
+    
+    // posibles(i,j) = se puede formar una varilla j con varillas de i.
+    // posibles(0,0) = true;
+    // posibles(i,0) i >= 1 = false;
+    // posibles(0,j) = false;
+    //
+    // posibles(i,j) = true             si v[i] == j
+    // posibles(i,j) = posibles(i-1,j)  si v[i] > j
+    // posibles(i,j) = posibles(i-1,j) || posibles(i-1,j-v[i]) si v[i] < j
+    //
+    
+    void calcularPosibles(std::vector<int> &v, int nVarillas, int L, std::vector<bool> &solucion)
+    {
+        for (int i = 1; i <= nVarillas; i++)
+        {
+            for (int j= L; j >= 1; j--)
+            {
+                if (v[i] == j)
+                    solucion[j] = true;
+                else if (v[i] < j)
+                    solucion[j] = solucion[j] || solucion[j-v[i]];
+            }
+        }
     }
     
     //  varillas(i,j) = numero de varillas mínimo que de longitud l que suman una longitud j.
