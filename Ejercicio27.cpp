@@ -10,6 +10,91 @@
 #include <vector>
 #include "Matriz.h"
 
+void comprobarA(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int j , int k)
+{
+    A[i][j] = false;
+    
+    while (!A[i][j] && k < j) {
+        //si ocurre (A y C)
+        if(A[i][k] && C[k+1][j])
+        {
+            A[i][j] = true;
+            //llamada rara
+        }
+        // si ocurre (B y C)
+        else if (B[i][k] && C[k+1][j])
+        {
+            A[i][j] = true;
+        }
+        // si ocurre (C y A)
+        else if (C[i][k] && A[k+1][j])
+        {
+            A[i][j] = true;
+        }
+        else{
+            k++;
+        }
+    }
+    //Para B
+
+}
+
+void comprobarB(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int j , int k)
+{
+    B[i][j] = false;
+    
+    while (!B[i][j] && k < j) {
+        //si ocurre (A y A)
+        if(A[i][k] && A[k+1][j])
+        {
+            B[i][j] = true;
+            //llamada rara
+        }
+        // si ocurre (A y B)
+        else if (A[i][k] && B[k+1][j])
+        {
+            B[i][j] = true;
+        }
+        // si ocurre (B y B)
+        else if (B[i][k] && B[k+1][j])
+        {
+            B[i][j] = true;
+        }
+        else{
+            k++;
+        }
+    }
+
+}
+
+void comprobarC(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int j , int k)
+{
+    C[i][j] = false;
+    
+    while (!C[i][j] && k < j) {
+        //si ocurre (B y A)
+        if(B[i][k] && A[k+1][j])
+        {
+            C[i][j] = true;
+            //llamada rara
+        }
+        // si ocurre (C y B)
+        else if (C[i][k] && B[k+1][j])
+        {
+            C[i][j] = true;
+        }
+        // si ocurre (C y C)
+        else if (C[i][k] && C[k+1][j])
+        {
+            C[i][j] = true;
+        }
+        else{
+            k++;
+        }
+    }
+
+}
+
 
 bool colocarParentesis(std::vector<char> letras, int n)
 {
@@ -27,86 +112,13 @@ bool colocarParentesis(std::vector<char> letras, int n)
     for (int d = 1; d<= n-1; d++) {
         for (int i = 1; i <= n-d; i++) {
             int j = i+d;
-            
-            //Para A
-            
-            A[i][j] = false;
             int k = i;
             
-            while (!A[i][j] && k < j) {
-                //si ocurre (A y C)
-                if(A[i][k] && C[k+1][j])
-                {
-                    A[i][j] = true;
-                    //llamada rara
-                }
-                // si ocurre (B y C)
-                else if (B[i][k] && C[k+1][j])
-                {
-                    A[i][j] = true;
-                }
-                // si ocurre (C y A)
-                else if (C[i][k] && A[k+1][j])
-                {
-                    A[i][j] = true;
-                }
-                else{
-                    k++;
-                }
-            }
-            //Para B
+            comprobarA(A, B, C, i, j, k);
+            comprobarB(A, B, C, i, j, k);
+            comprobarC(A, B, C, i, j, k);
             
-            B[i][j] = false;
-            k = i;
             
-            while (!B[i][j] && k < j) {
-                //si ocurre (A y A)
-                if(A[i][k] && A[k+1][j])
-                {
-                    B[i][j] = true;
-                    //llamada rara
-                }
-                // si ocurre (A y B)
-                else if (A[i][k] && B[k+1][j])
-                {
-                    B[i][j] = true;
-                }
-                // si ocurre (B y B)
-                else if (B[i][k] && B[k+1][j])
-                {
-                    B[i][j] = true;
-                }
-                else{
-                    k++;
-                }
-            }
-            
-            //Para C
-            
-            C[i][j] = false;
-            k = i;
-            
-            while (!C[i][j] && k < j) {
-                //si ocurre (B y A)
-                if(B[i][k] && A[k+1][j])
-                {
-                    C[i][j] = true;
-                    //llamada rara
-                }
-                // si ocurre (C y B)
-                else if (C[i][k] && B[k+1][j])
-                {
-                    C[i][j] = true;
-                }
-                // si ocurre (C y C)
-                else if (C[i][k] && C[k+1][j])
-                {
-                    C[i][j] = true;
-                }
-                else{
-                    k++;
-                }
-            }
         }
     }
     return A[1][n];
@@ -116,23 +128,23 @@ bool resuelveCaso()
 {
     
     
-    //  Formas de sacar A
+    //  Obtener A
     //
-    //  A(i,j)  = A(i,k) y C(k+1,j)      (A y C)
+    //  A(i,j)  = A(i,k) y C(k+1,j)      (A y C)    i<=k<j
     //  A(i,j)  = B(i,k) y C(k+1,j)      (B y C)
     //  A(i,j)  = C(i,k) y A(k+1,j)      (C y A)
     //
     //
-    //  Formas de sacar B
+    //  Obtener B
     //
-    //  B(i,j)  = A(i,k) y A(k+1,j)      (A y A)
+    //  B(i,j)  = A(i,k) y A(k+1,j)      (A y A)    i<=k<j
     //  B(i,j)  = A(i,k) y B(k+1,j)      (A y B)
     //  B(i,j)  = B(i,k) y B(k+1,j)      (B y B)
     //
     //
-    //  Formas de sacar C
+    //  Obtener C
     //
-    //  C(i,j)  = B(i,k) y A(k+1,j)      (B y A)
+    //  C(i,j)  = B(i,k) y A(k+1,j)      (B y A)    i<=k<j
     //  C(i,j)  = C(i,k) y B(k+1,j)      (C y B)
     //  C(i,j)  = C(i,k) y C(k+1,j)      (C y C)
     //
