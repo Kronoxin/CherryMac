@@ -3,7 +3,7 @@
 //  Ejercicio1
 //
 //
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <vector>
@@ -56,4 +56,4 @@ int main()
 {
     while(resuelveCaso());
     return 0;
-}
+}*/
