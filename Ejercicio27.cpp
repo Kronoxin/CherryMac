@@ -19,7 +19,6 @@ void comprobarA(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
         if(A[i][k] && C[k+1][j])
         {
             A[i][j] = true;
-            //llamada rara
         }
         // si ocurre (B y C)
         else if (B[i][k] && C[k+1][j])
@@ -48,7 +47,6 @@ void comprobarB(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
         if(A[i][k] && A[k+1][j])
         {
             B[i][j] = true;
-            //llamada rara
         }
         // si ocurre (A y B)
         else if (A[i][k] && B[k+1][j])
@@ -76,7 +74,6 @@ void comprobarC(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
         if(B[i][k] && A[k+1][j])
         {
             C[i][j] = true;
-            //llamada rara
         }
         // si ocurre (C y B)
         else if (C[i][k] && B[k+1][j])
