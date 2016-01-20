@@ -15,26 +15,13 @@ void comprobarA(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
     A[i][j] = false;
     
     while (!A[i][j] && k < j) {
-        //si ocurre (A y C)
-        if(A[i][k] && C[k+1][j])
-        {
-            A[i][j] = true;
-        }
-        // si ocurre (B y C)
-        else if (B[i][k] && C[k+1][j])
-        {
-            A[i][j] = true;
-        }
-        // si ocurre (C y A)
-        else if (C[i][k] && A[k+1][j])
-        {
-            A[i][j] = true;
-        }
-        else{
+
+        //Si ocurre         A y C               B y C                      C y A
+        A[i][j] = (A[i][k] && C[k+1][j]) || (B[i][k] && C[k+1][j]) || (C[i][k] && A[k+1][j]);
+        
+        if(!A[i][j])
             k++;
-        }
     }
-    //Para B
 
 }
 
@@ -43,71 +30,49 @@ void comprobarB(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
     B[i][j] = false;
     
     while (!B[i][j] && k < j) {
-        //si ocurre (A y A)
-        if(A[i][k] && A[k+1][j])
-        {
-            B[i][j] = true;
-        }
-        // si ocurre (A y B)
-        else if (A[i][k] && B[k+1][j])
-        {
-            B[i][j] = true;
-        }
-        // si ocurre (B y B)
-        else if (B[i][k] && B[k+1][j])
-        {
-            B[i][j] = true;
-        }
-        else{
-            k++;
-        }
-    }
 
+        //Si ocurre         A y A               A y B                       B y B
+        B[i][j] = (A[i][k] && A[k+1][j]) || (A[i][k] && B[k+1][j]) || (B[i][k] && B[k+1][j]);
+        
+        if(!B[i][j])
+            k++;
+    }
 }
 
 void comprobarC(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int j , int k)
 {
     C[i][j] = false;
     
-    while (!C[i][j] && k < j) {
-        //si ocurre (B y A)
-        if(B[i][k] && A[k+1][j])
-        {
-            C[i][j] = true;
-        }
-        // si ocurre (C y B)
-        else if (C[i][k] && B[k+1][j])
-        {
-            C[i][j] = true;
-        }
-        // si ocurre (C y C)
-        else if (C[i][k] && C[k+1][j])
-        {
-            C[i][j] = true;
-        }
-        else{
+    while (!C[i][j] && k < j)
+    {
+        
+        //Si ocurre     B y A                 C y B                   C y C
+        C[i][j] = (B[i][k] && A[k+1][j]) || (C[i][k] && B[k+1][j]) || (C[i][k] && C[k+1][j]) ;
+        
+        if(!C[i][j])
             k++;
-        }
     }
-
 }
 
 
 bool colocarParentesis(std::vector<char> letras, int n)
 {
-    Matriz<bool> A(n+1,n+1,false);
-    Matriz<bool> B(n+1,n+1,false);
-    Matriz<bool> C(n+1,n+1,false);
+    Matriz<bool> A(n,n,false);
+    Matriz<bool> B(n,n,false);
+    Matriz<bool> C(n,n,false);
     
-    for (int i = 1; i <= n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         A[i][i] = (letras[i] == 'a');
         B[i][i] = (letras[i] == 'b');
         C[i][i] = (letras[i] == 'c');
         
     }
     
-    for (int d = 1; d<= n-1; d++) {
-        for (int i = 1; i <= n-d; i++) {
+    for (int d = 1; d< n; d++)
+    {
+        for (int i = 0; i < n-d; i++)
+        {
             int j = i+d;
             int k = i;
             
@@ -118,7 +83,7 @@ bool colocarParentesis(std::vector<char> letras, int n)
             
         }
     }
-    return A[1][n];
+    return A[0][n-1];
 }
 
 bool resuelveCaso()
@@ -155,13 +120,13 @@ bool resuelveCaso()
         return false;
     
     
-    std::vector<char> letras(linea.length()+1);
+    std::vector<char> letras(linea.length());
     
-    for (int i = 1; i <= linea.length(); i++) {
-        letras[i] = linea[i-1];
+    for (int i = 0; i < linea.length(); i++) {
+        letras[i] = linea[i];
     }
     
-    if ( colocarParentesis(letras,letras.size()-1)){
+    if ( colocarParentesis(letras,letras.size())){
         std::cout << "SI\n";
     }
     else{
