@@ -57,19 +57,7 @@ int nFormas(std::vector<char> letras, int n)
         {
             int j = i+d;
             int k=i;
-          //  A[i][j]=0; B[i][j]=0; C[i][j]=0;
-            
-           // for (int k = i; k <= i+d-1; k++) {
-                
-           /* while (k <= i+d-1) {
-                
-            
-                A[i][j] += (A[i][k] * C[k+1][j]) + (B[i][k] * C[k+1][j]) + (C[i][k] * A[k+1][j]);
-                B[i][j] += (A[i][k] * A[k+1][j]) + (A[i][k] * B[k+1][j]) + (B[i][k] * B[k+1][j]);
-                C[i][j] += (B[i][k] * A[k+1][j]) + (C[i][k] * B[k+1][j]) + (C[i][k] * C[k+1][j]);
-                
-                k++;
-            }*/
+
             nFormasA(A, B, C, i, j, k, d);
             nFormasB(A, B, C, i, j, k, d);
             nFormasC(A, B, C, i, j, k, d);
