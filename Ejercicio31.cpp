@@ -3,7 +3,7 @@
 //  Ejercicio1
 //
 
-
+/*
 #include <string>
 #include <iostream>
 #include <vector>
@@ -12,7 +12,7 @@
 bool resuelveCaso()
 {
     
-    //  monedas(i,j) =
+    //  monedas(i,j) = Numero minimo de monedas de tipo hasta i, con las que se puede pagar j.
     //
     //  monedas(i,0) = 0
     //  monedas(0,j) = inf.
@@ -63,3 +63,4 @@ int main()
     while(resuelveCaso());
     return 0;
 }
+*/

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33AFCD8E1C51480200CFE07B /* Laberinto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33AFCD8D1C51480200CFE07B /* Laberinto.cpp */; };
 		450358511BE111A600ED1CDA /* Ejercicio8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358501BE111A600ED1CDA /* Ejercicio8.cpp */; };
 		450358531BE11DCA00ED1CDA /* Ejercicio9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358521BE11DCA00ED1CDA /* Ejercicio9.cpp */; };
 		450358571BE12E0C00ED1CDA /* Ejercicio10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 450358561BE12E0C00ED1CDA /* Ejercicio10.cpp */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33AFCD8D1C51480200CFE07B /* Laberinto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Laberinto.cpp; sourceTree = "<group>"; };
 		450358501BE111A600ED1CDA /* Ejercicio8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio8.cpp; sourceTree = "<group>"; };
 		450358521BE11DCA00ED1CDA /* Ejercicio9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio9.cpp; sourceTree = "<group>"; };
 		450358541BE122C900ED1CDA /* bancoPajaros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bancoPajaros.h; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33AFCD8C1C5147E600CFE07B /* Eda */ = {
+			isa = PBXGroup;
+			children = (
+				33AFCD8D1C51480200CFE07B /* Laberinto.cpp */,
+			);
+			name = Eda;
+			sourceTree = "<group>";
+		};
 		450358551BE12DF500ED1CDA /* Tema 3 - Grafos */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 		452BD94B1BC4FF1200413B8B = {
 			isa = PBXGroup;
 			children = (
+				33AFCD8C1C5147E600CFE07B /* Eda */,
 				454B6A961C29689800435A41 /* AdaByron */,
 				4555E7CB1C21581200F93997 /* Tema 5 - Programación dinámica */,
 				45059F671C08DE1A0070F0AB /* Tema 4 - Voraces */,
@@ -330,6 +341,7 @@
 				4555E7C81C1B09F900F93997 /* Ejercicio24.cpp in Sources */,
 				4555E7C41C18801300F93997 /* Ejercicio21.cpp in Sources */,
 				4559D4041BC52927005722B6 /* Ejericio2.cpp in Sources */,
+				33AFCD8E1C51480200CFE07B /* Laberinto.cpp in Sources */,
 				45059F561C05B5460070F0AB /* Ejercicio16.cpp in Sources */,
 				45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */,
 				450358571BE12E0C00ED1CDA /* Ejercicio10.cpp in Sources */,

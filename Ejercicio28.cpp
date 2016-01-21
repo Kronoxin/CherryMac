@@ -10,26 +10,32 @@
 #include <vector>
 #include "Matriz.h"
 
-void nFormasA(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i , int j , int k, int d)
+void nFormasA(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i , int d)
 {
+    int k = i;
+    int j = i+d;
     while (k <= i+d-1) {
-        A[i][j] += (A[i][k] * C[k+1][j]) + (B[i][k] * C[k+1][j]) + (C[i][k] * A[k+1][j]);
+        A[i][j] = (((A[i][j] + (A[i][k] * (long long)C[k+1][j])%1000000007)%1000000007 + (B[i][k] * (long long)C[k+1][j])%1000000007)%1000000007 + (C[i][k] * (long long)A[k+1][j])%1000000007)%1000000007;
         k++;
     }
 }
 
-void nFormasB(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i , int j , int k, int d)
+void nFormasB(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i, int d)
 {
+    int k = i;
+    int j = i+d;
     while (k <= i+d-1) {
-        B[i][j] += (A[i][k] * A[k+1][j]) + (A[i][k] * B[k+1][j]) + (B[i][k] * B[k+1][j]);
+        B[i][j] = (((B[i][j] + (A[i][k] * (long long)A[k+1][j])%1000000007)%1000000007 + (A[i][k] * (long long)B[k+1][j])%1000000007)%1000000007 + (B[i][k] * (long long)B[k+1][j])%1000000007)%1000000007;
         k++;
     }
 }
 
-void nFormasC(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i , int j , int k, int d)
+void nFormasC(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i, int d)
 {
+    int k = i;
+    int j = i+d;
     while (k <= i+d-1) {
-        C[i][j] += (B[i][k] * A[k+1][j]) + (C[i][k] * B[k+1][j]) + (C[i][k] * C[k+1][j]);
+        C[i][j] = (((C[i][j] + (B[i][k] * (long long)A[k+1][j])%1000000007)%1000000007 + (C[i][k] * (long long)B[k+1][j])%1000000007)%1000000007 + (C[i][k] * (long long)C[k+1][j])%1000000007)%1000000007;
         k++;
     }
 }
@@ -55,12 +61,10 @@ int nFormas(std::vector<char> letras, int n)
     {
         for (int i = 0; i < n-d; i++)
         {
-            int j = i+d;
-            int k=i;
 
-            nFormasA(A, B, C, i, j, k, d);
-            nFormasB(A, B, C, i, j, k, d);
-            nFormasC(A, B, C, i, j, k, d);
+            nFormasA(A, B, C, i, d);
+            nFormasB(A, B, C, i, d);
+            nFormasC(A, B, C, i, d);
             
         }
     }
