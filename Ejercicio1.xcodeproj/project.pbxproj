@@ -41,6 +41,7 @@
 		45AC438D1C4D49300058B781 /* Ejercicio27.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC438C1C4D49300058B781 /* Ejercicio27.cpp */; };
 		45AC438F1C4D65BE0058B781 /* Ejercicio29.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */; };
 		45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */; };
+		45B44AE91C5127C700B7BB9B /* Ejercicio28.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */; };
 		45D47CEA1BCE3B2A00C93194 /* Ejercicio4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		45AC438C1C4D49300058B781 /* Ejercicio27.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio27.cpp; sourceTree = "<group>"; };
 		45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio29.cpp; sourceTree = "<group>"; };
 		45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bus Driver.cpp"; sourceTree = "<group>"; };
+		45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio28.cpp; sourceTree = "<group>"; };
 		45CC00721C47F49F00CEAE13 /* Varillas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Varillas.h; sourceTree = "<group>"; };
 		45D112701BFA3EE900681843 /* grafo10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grafo10.txt; sourceTree = "<group>"; };
 		45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio4.cpp; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				45CC00721C47F49F00CEAE13 /* Varillas.h */,
 				45AC438C1C4D49300058B781 /* Ejercicio27.cpp */,
 				45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */,
+				45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */,
 			);
 			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				45059F5A1C061A440070F0AB /* Ejercicio18.cpp in Sources */,
 				454B6A9A1C2975C100435A41 /* Unique Snowflakes.cpp in Sources */,
 				45807A5E1BF38DF800B28E68 /* Ejercicio12.cpp in Sources */,
+				45B44AE91C5127C700B7BB9B /* Ejercicio28.cpp in Sources */,
 				452BD9581BC4FF1200413B8B /* main.cpp in Sources */,
 				4518CA811BDAA11B00CA0AD5 /* Ejercicio7.cpp in Sources */,
 				458096861C0367280064C1C9 /* Ejercicio15.cpp in Sources */,
