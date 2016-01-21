@@ -42,6 +42,7 @@
 		45AC438F1C4D65BE0058B781 /* Ejercicio29.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */; };
 		45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */; };
 		45B44AE91C5127C700B7BB9B /* Ejercicio28.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */; };
+		45B44AEB1C51345700B7BB9B /* Ejercicio31.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */; };
 		45D47CEA1BCE3B2A00C93194 /* Ejercicio4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio29.cpp; sourceTree = "<group>"; };
 		45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bus Driver.cpp"; sourceTree = "<group>"; };
 		45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio28.cpp; sourceTree = "<group>"; };
+		45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio31.cpp; sourceTree = "<group>"; };
 		45CC00721C47F49F00CEAE13 /* Varillas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Varillas.h; sourceTree = "<group>"; };
 		45D112701BFA3EE900681843 /* grafo10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grafo10.txt; sourceTree = "<group>"; };
 		45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio4.cpp; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				45AC438C1C4D49300058B781 /* Ejercicio27.cpp */,
 				45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */,
 				45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */,
+				45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */,
 			);
 			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				4555E7C61C19F9A800F93997 /* Ejercicio23.cpp in Sources */,
 				45AC438F1C4D65BE0058B781 /* Ejercicio29.cpp in Sources */,
 				450358531BE11DCA00ED1CDA /* Ejercicio9.cpp in Sources */,
+				45B44AEB1C51345700B7BB9B /* Ejercicio31.cpp in Sources */,
 				45059F661C08CF8C0070F0AB /* ConjuntosDisjuntosMod.cpp in Sources */,
 				45807A5B1BEA5E0D00B28E68 /* GrafoDirigido.cpp in Sources */,
 				451BD2151BD7747C00CBB0A9 /* Ejercicio6.cpp in Sources */,
