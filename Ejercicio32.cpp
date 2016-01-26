@@ -3,122 +3,63 @@
 //  El Carpintero Ebanisto
 //
 
-
 #include <string>
 #include <iostream>
 #include <vector>
 
-
+/*
 //Solución con vector
 
-bool es_par(int n){
+int esfuerzo_minimo(std::vector<int> &puntosDeCorte, int nCortes, std::vector<int> &solucion){
     
-    if(n%2 == 0)
-        return true;
-    else
-        return false;
-}
-
-int maximizar_comida(std::vector<int> &cubos, int nCubos){
-    int sumaPares = 0;
-    int sumaImpares = 0;
     
-    //PARES SEGUN LAS POSICIONES DEL VECTOR, elemento 0 impar, elemento 1 par.
-    for (int i = 0; i< nCubos; i++) {
-        if(es_par(i)){
-            sumaImpares += cubos[i];
-        }
-        else{
-            sumaPares += cubos[i];
-        }
-    }
-    
-    int extremoIzq = 0;
-    int extremoDrch = nCubos-1;
-    int acumulado = 0;
-    
-    while (extremoIzq < extremoDrch) {
-        if(sumaImpares >= sumaPares){
-            
-            //como por impar
-            if(es_par(extremoIzq)){
-                
-                acumulado += cubos[extremoIzq];
-                sumaImpares -= cubos[extremoIzq];
-                extremoIzq++;
-            }
-            else{
-                acumulado += cubos[extremoDrch];
-                sumaImpares -= cubos[extremoDrch];
-                extremoDrch--;
-                
-            }
-            
-        }
-        else{
-            //como por par
-            if(es_par(extremoIzq)){
-                
-                acumulado += cubos[extremoDrch];
-                sumaPares -= cubos[extremoDrch];
-                extremoDrch--;
-            }
-            else{
-                acumulado += cubos[extremoIzq];
-                sumaPares -= cubos[extremoIzq];
-                extremoIzq++;
-            }
-        }
-        //come la otra vaca
-        
-        if(cubos[extremoIzq] >= cubos[extremoDrch]){
-            //come el más grande, en este caso, por la izquierda
-            
-            if(es_par(extremoIzq)){
-                sumaImpares -= cubos[extremoIzq];
-            }
-            else{
-                sumaPares -= cubos[extremoIzq];
-            }
-        }
-        else{
-            //come por la derecha
-            
-            if(es_par(extremoDrch)){
-                sumaImpares -= cubos[extremoDrch];
-            }
-            else{
-                sumaPares -= cubos[extremoDrch];
-            }
-            extremoDrch--;
-        }
-    }
-    
-    return acumulado;
+    return 1;
 }
 
 bool resuelveCaso()
 {
     
+    //  esfuerzoMin(i,j) = Esfuerzo minimo para cortar una tabla de longitud Xj - Xi en j-i-1 trozos.
+    //
+    //  esfuerzoMin(i,0) =
+    //  esfuerzoMin(0,j) =
+    //
+    //  esfuerzoMin(i,j) =                                                              xi >= xj.
+    //  esfuerzoMin(i,j) =  0                                                           xj = xi+1.
+    //  esfuerzoMin(i,j) =  min{ esfuerzoMin(i-k) + esfuerzoMin(k,j)}  + 2(xj+xi)     i+1 <= k < j
+    //
     
     const int infinidad= 1000001;
-    int nCubos;
+    int longitudTablon;
+    int nCortes;
     
-    std::cin >> nCubos;
+    std::cin >> longitudTablon;
+    std::cin >> nCortes;
     
-    if(nCubos == 0)               // si no tenemos entrada, terminamos
+    
+    
+    if(longitudTablon == 0 && nCortes == 0)               // si no tenemos entrada, terminamos
         return false;
     
     
-    std::vector<int> cubos(nCubos,0);
+    std::vector<int> puntosDeCorte(nCortes,0);
     
-    for (int i = 0; i<nCubos; i++) {
+    for (int i = 0; i<nCortes; i++) {
         int num;
         std::cin >> num;
-        cubos[i] = num;
+        puntosDeCorte[i] = num;
     }
     
-    std::cout << maximizar_comida(cubos,nCubos) << std::endl;
+    
+    
+    std::vector<int> solucion(nCortes,infinidad);
+    solucion[0] = 0;
+    
+    
+    std::cout << esfuerzo_minimo(puntosDeCorte,nCortes,solucion) << std::endl;
+    
+    
+    
     
     return true;
     
@@ -129,4 +70,4 @@ int main()
 {
     while(resuelveCaso());
     return 0;
-}
+}*/
