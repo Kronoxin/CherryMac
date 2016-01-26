@@ -43,6 +43,8 @@
 		45AC438F1C4D65BE0058B781 /* Ejercicio29.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */; };
 		45AC7CD51C440CB3006BD611 /* Bus Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */; };
 		45B3D2E91C57888B00BFF653 /* Ejercicio31b.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B3D2E81C57888B00BFF653 /* Ejercicio31b.cpp */; };
+		45B3D2EB1C57D0EE00BFF653 /* Ejercicio32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B3D2EA1C57D0EE00BFF653 /* Ejercicio32.cpp */; };
+		45B3D2ED1C57E10800BFF653 /* Ejercicio34.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B3D2EC1C57E10800BFF653 /* Ejercicio34.cpp */; };
 		45B44AE91C5127C700B7BB9B /* Ejercicio28.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */; };
 		45B44AEB1C51345700B7BB9B /* Ejercicio31.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */; };
 		45D47CEA1BCE3B2A00C93194 /* Ejercicio4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D47CE91BCE3B2A00C93194 /* Ejercicio4.cpp */; };
@@ -122,6 +124,8 @@
 		45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio29.cpp; sourceTree = "<group>"; };
 		45AC7CD41C440CB3006BD611 /* Bus Driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bus Driver.cpp"; sourceTree = "<group>"; };
 		45B3D2E81C57888B00BFF653 /* Ejercicio31b.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio31b.cpp; sourceTree = "<group>"; };
+		45B3D2EA1C57D0EE00BFF653 /* Ejercicio32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio32.cpp; sourceTree = "<group>"; };
+		45B3D2EC1C57E10800BFF653 /* Ejercicio34.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio34.cpp; sourceTree = "<group>"; };
 		45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio28.cpp; sourceTree = "<group>"; };
 		45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ejercicio31.cpp; sourceTree = "<group>"; };
 		45CC00721C47F49F00CEAE13 /* Varillas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Varillas.h; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */,
 				45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */,
 				45B3D2E81C57888B00BFF653 /* Ejercicio31b.cpp */,
+				45B3D2EA1C57D0EE00BFF653 /* Ejercicio32.cpp */,
+				45B3D2EC1C57E10800BFF653 /* Ejercicio34.cpp */,
 			);
 			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				452795CD1C027D640031E8A4 /* Ejercicio14.cpp in Sources */,
 				45B3D2E91C57888B00BFF653 /* Ejercicio31b.cpp in Sources */,
 				454B6A981C296B7600435A41 /* Commandos.cpp in Sources */,
+				45B3D2ED1C57E10800BFF653 /* Ejercicio34.cpp in Sources */,
 				4555E7C81C1B09F900F93997 /* Ejercicio24.cpp in Sources */,
 				4555E7C41C18801300F93997 /* Ejercicio21.cpp in Sources */,
 				4559D4041BC52927005722B6 /* Ejericio2.cpp in Sources */,
@@ -360,6 +367,7 @@
 				451BD2151BD7747C00CBB0A9 /* Ejercicio6.cpp in Sources */,
 				450361051BD2DA46004B5FCE /* Ejercicio5.cpp in Sources */,
 				45059F691C08DE3B0070F0AB /* Ejercicio19.cpp in Sources */,
+				45B3D2EB1C57D0EE00BFF653 /* Ejercicio32.cpp in Sources */,
 				45059F581C05C2060070F0AB /* Ejercicio17.cpp in Sources */,
 				45807A551BEA5D3800B28E68 /* Ejercicio11.cpp in Sources */,
 				450358511BE111A600ED1CDA /* Ejercicio8.cpp in Sources */,
