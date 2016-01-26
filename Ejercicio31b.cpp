@@ -3,7 +3,7 @@
 //  Ejercicio1
 //
 
-
+/*
 #include <string>
 #include <iostream>
 #include <vector>
@@ -103,4 +103,4 @@ int main()
 {
     while(resuelveCaso());
     return 0;
-}
+}*/
