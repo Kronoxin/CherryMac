@@ -9,7 +9,7 @@
 #include <vector>
 #include "Matriz.h"
 #include <unordered_map>
-/*
+
 //Solución con Matriz
 void monedas_minimas(Matriz<int> &M , std::vector<int> &monedas, int precio){
     
@@ -64,7 +64,7 @@ void monedas_minimas(std::vector<int> &monedas, int precio, std::vector<int> &so
         }
     }
 }*/
-/*
+
 bool resuelveCaso()
 {
     
@@ -128,12 +128,26 @@ bool resuelveCaso()
     std::unordered_map<int, int> cantidad(nMonedas);
     
     //monedas_minimas(monedas, precio,solucion);
-    //monedas_minimas(M, monedas, precio);
+    monedas_minimas(M, monedas, precio);
     
-    cantidad = contruyendoSolucion(precio,M,monedas,nMonedas,linea2,linea1);
     
-    std::cout << M[cantidadDeMonedas][precio] << std::endl;
-    //std::cout << solucion[precio] << std::endl;
+    if (M[cantidadDeMonedas][precio] == infinidad)
+        std::cout << "NO\n";
+    else
+    {
+        cantidad = contruyendoSolucion(precio,M,monedas,nMonedas,linea2,linea1);
+        
+        std::unordered_map<int, int>::iterator it = cantidad.begin();
+
+        std::cout << "SI";
+        
+        while (it != cantidad.end())
+        {
+            std::cout << " " << (*it).second;
+            it++;
+        }
+        std::cout << std::endl;
+    }
     
     
     return true;
@@ -146,4 +160,3 @@ int main()
     while(resuelveCaso());
     return 0;
 }
-*/

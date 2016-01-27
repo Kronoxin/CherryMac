@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-
+/*
 
 //Solución con vector
 
@@ -131,3 +131,4 @@ int main()
     while(resuelveCaso());
     return 0;
 }
+*/
