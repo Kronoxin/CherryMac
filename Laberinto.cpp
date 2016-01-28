@@ -73,5 +73,6 @@ void laberinto(Matriz<bool> L, int N, coordenada posActual,coordenada posDestino
                 marcaje[posActual.x][posActual.y] = false;
             }
         }
+        costeActual--;
     }
 }

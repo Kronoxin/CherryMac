@@ -6,14 +6,29 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include "Matriz.h"
 
-/*
+
 //Solución con vector
 
-int esfuerzo_minimo(std::vector<int> &puntosDeCorte, int nCortes, std::vector<int> &solucion){
+int esfuerzo_minimo(std::vector<int> &puntosDeCorte, int nCortes, Matriz<int> &solucion)
+{
+    for ( int d = 1 ; d <nCortes; d++){
+        
+        
+        for (int i =1; i <= nCortes-d; i++)
+        {
+            int j = i + d;
+            int min = 1000001;
+            for (int k = i+1; k < j; k++)
+            {
+                min = std::min(min,(solucion[i][k]+solucion[k][j])+2*(puntosDeCorte[j]-puntosDeCorte[i]));
+            }
+            solucion[i][j] = min;
+        }
+    }
     
-    
-    return 1;
+    return solucion[1][nCortes];
 }
 
 bool resuelveCaso()
@@ -26,7 +41,7 @@ bool resuelveCaso()
     //
     //  esfuerzoMin(i,j) =                                                              xi >= xj.
     //  esfuerzoMin(i,j) =  0                                                           xj = xi+1.
-    //  esfuerzoMin(i,j) =  min{ esfuerzoMin(i-k) + esfuerzoMin(k,j)}  + 2(xj+xi)     i+1 <= k < j
+    //  esfuerzoMin(i,j) =  min{ esfuerzoMin(i,k) + esfuerzoMin(k,j)}  + 2(xj-xi)     i+1 <= k < j
     //
     
     const int infinidad= 1000001;
@@ -52,9 +67,7 @@ bool resuelveCaso()
     
     
     
-    std::vector<int> solucion(nCortes,infinidad);
-    solucion[0] = 0;
-    
+    Matriz<int> solucion(nCortes+1,nCortes+1,0);
     
     std::cout << esfuerzo_minimo(puntosDeCorte,nCortes,solucion) << std::endl;
     
@@ -70,4 +83,4 @@ int main()
 {
     while(resuelveCaso());
     return 0;
-}*/
+}

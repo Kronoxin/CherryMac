@@ -4,11 +4,10 @@
 //
 
 
-
+/*
 #include <string>
 #include <iostream>
 #include <vector>
-/*
 
 //Solución con vector
 
@@ -20,7 +19,7 @@ bool es_par(int n){
         return false;
 }
 
-int maximizar_comida(std::vector<int> &cubos, int nCubos){
+int maximizar_comida(std::vector<int> &cubos, int nCubos, int &extremoIzq, int &extremoDrch){
     int sumaPares = 0;
     int sumaImpares = 0;
     
@@ -34,8 +33,6 @@ int maximizar_comida(std::vector<int> &cubos, int nCubos){
         }
     }
     
-    int extremoIzq = 0;
-    int extremoDrch = nCubos-1;
     int acumulado = 0;
     
     while (extremoIzq < extremoDrch) {
@@ -118,8 +115,11 @@ bool resuelveCaso()
         std::cin >> num;
         cubos[i] = num;
     }
+    int extremoIzq = 0;
+    int extremoDrch = nCubos-1;
+    int resultado = maximizar_comida(cubos,nCubos,extremoIzq,extremoDrch);
+    std::cout << resultado << " " << extremoIzq << " " << extremoDrch << std::endl;
     
-    std::cout << maximizar_comida(cubos,nCubos) << std::endl;
     
     return true;
     
