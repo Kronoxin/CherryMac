@@ -1,7 +1,30 @@
+//  TAIS08 , Rubén Gómez y Daniel Lago
 //
-//  Varillas.h
-//  Ejercicio1
-
+//  Ejercicio 26 - Varillas.
+//
+/*
+ Resumen de solucion:
+ 
+ El problema consta de 4 apartados.
+ 
+ 1. Indicar si es posible formar una varilla de longitud exacta L usando las varillas de las que disponemos.
+ La idea es, si no estoy en los casos base, compruebo si puedo formar la varilla objetivo usando la varilla actual
+ 
+ 2. Numero de formas posibles de formar la varilla objetivo con las varillas disponibles.
+ Si no estoy en los casos base, hago la suma del numero de combinaciones posibles usando la varilla actual con el
+ numero de combinaciones sin usar la varilla actual.
+ 
+ 3. Numero minimo de varillas necesarias para formar la varilla objetivo.
+ Hago el minimo entre el numero de varillas necesarias para formar la varilla objetivo usando mi varilla actual o sin usarla.
+ 
+ 4. Minimo coste posible para formar la varilla objetivo.
+ Si la longitud de la varilla actual es igual a la longitud objetivo el coste que buscamos es el minimo entre el coste de esa varilla actual
+ y el coste que tenemos sin usar esa varilla. Si la longitud de la varilla actual es inferior a la del objetivo calculamos el minimo entre el coste de la varilla actual mas los costes que teniamos y el coste sin usar la varilla actual.
+ 
+ 
+ Coste O(nVarillas*L) Siendo L la longitud de la varilla.
+ Coste memoria O(L);
+ */
 
 #ifndef Varillas_h
 #define Varillas_h
@@ -104,7 +127,8 @@ private:
     // posibles(i,j) = true             si v[i] == j
     // posibles(i,j) = posibles(i-1,j)  si v[i] > j
     // posibles(i,j) = posibles(i-1,j) || posibles(i-1,j-v[i]) si v[i] < j
-    //
+    // Coste O(nVarillas*L) Siendo L la longitud de la varilla.
+    // Coste memoria O(L);
     
     void calcularPosibles(std::vector<int> &v, int nVarillas, int L, std::vector<bool> &solucion)
     {
@@ -127,7 +151,8 @@ private:
     //
     //  varillas(i,j) = varillas(i-1,j)                             si l > j;
     //  varillas(i,j) = min(varillas(i-1,j) , varillas(i-1, j-l))   si l<=j
-    //
+    // Coste O(nVarillas*L) Siendo L la longitud de la varilla.
+    // Coste memoria O(L);
 
     void calcularNumMinVarillas(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion)
     {
@@ -149,6 +174,8 @@ private:
     //  combinaciones(i,j) = combinaciones( i-1, j)                             si li > j.
     //  combinaciones(i,j) = combinaciones( i-1, j) + combinaciones(i-1, j-li)  si li <= j.
     //
+    // Coste O(nVarillas*L) Siendo L la longitud de la varilla.
+    // Coste memoria O(L);
     
     void calcularCombinaciones(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion)
     {
@@ -156,8 +183,6 @@ private:
         {
             for (int j = L; j >= 1 ; j--)
             {
-                //if (v[i]  == j)
-                //    solucion[j]++;
                 if (v[i] <= j)
                     solucion[j]= solucion[j] + solucion[j-v[i]];
                 
@@ -166,7 +191,7 @@ private:
     }
     
     
-    //  costes(i,j) = numero de formas de sumar la longitud j con varillas de l0....li.
+    //  costes(i,j) = coste de formar la longitud j con varillas de l0....li.
     //
     //  costes(0,0) = 0;
     //  costes(0,j) = 0;
@@ -175,7 +200,9 @@ private:
     //  costes(i,j) = costes( i-1, j)                                       si li > j.
     //  costes(i,j) = min( p[i] , costes( i-1, j) )                         si li = j.
     //  costes(i,j) = min( p[i] + costes( i-1, j-li) , costes( i-1, j) )    si li < j.
-    //
+    // Coste O(nVarillas*L) Siendo L la longitud de la varilla.
+    // Coste memoria O(L);
+    
     void calcularPrecios(std::vector<int> &v, int nVarillas, int L,std::vector<int> &solucion,std::vector<int> &costes)
     {
 

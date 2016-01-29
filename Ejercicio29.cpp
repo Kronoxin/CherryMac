@@ -1,7 +1,13 @@
+//  TAIS08 , Rubén Gómez y Daniel Lago
 //
-//  Ejercicio29.cpp
-//  Ejercicio1
+//  Ejercicio 27 - De aventura por el Amazonas.
 //
+/*
+ Resumen de solucion:
+ 
+ 
+ Coste O().
+ */
 
 
 #include <string>

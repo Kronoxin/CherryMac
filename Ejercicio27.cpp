@@ -1,9 +1,20 @@
+//  TAIS08 , Rubén Gómez y Daniel Lago
 //
-//  Ejercicio27.cpp
-//  Ejercicio1
+//  Ejercicio 27 - Inserción de Paréntesis.
 //
-
 /*
+ Resumen de solucion:
+ Necesitamos 3 matrices debido a que para saber si se puede formar la letra "a" con una colocacion de parentesis determinada tenemos que saber si podemos obtener la combinaciones de letras que dan lugar a esa a.
+ Por ejemplo a = a * c; a = b * c; a = c * a;
+ Por tanto tenemos que ir rellenando la matriz A,B y C para saber si se puede conseguir una A.
+ 
+ 
+ 
+ Coste O(nLetrasDeSecuencia^2)
+ Coste memoria O(nLetrasDeSecuencia^2).
+ */
+
+
 
 #include <string>
 #include <iostream>
@@ -55,6 +66,37 @@ void comprobarC(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
 }
 
 
+//  Obtener A
+//
+//  A(i,j)  = A(i,k) y C(k+1,j)      (A y C)    i<=k<j
+//  A(i,j)  = B(i,k) y C(k+1,j)      (B y C)
+//  A(i,j)  = C(i,k) y A(k+1,j)      (C y A)
+//
+//
+//  Obtener B
+//
+//  B(i,j)  = A(i,k) y A(k+1,j)      (A y A)    i<=k<j
+//  B(i,j)  = A(i,k) y B(k+1,j)      (A y B)
+//  B(i,j)  = B(i,k) y B(k+1,j)      (B y B)
+//
+//
+//  Obtener C
+//
+//  C(i,j)  = B(i,k) y A(k+1,j)      (B y A)    i<=k<j
+//  C(i,j)  = C(i,k) y B(k+1,j)      (C y B)
+//  C(i,j)  = C(i,k) y C(k+1,j)      (C y C)
+//
+/*
+ Casos de Prueba:
+ A(i,j) = ORk : i<=k<j; (A(i,k) and C(k+1,j)) or (B(i,k) and C(k+1,j)) or (C(i,k) and A(k+1,j));
+ B(i,j) = ORk : i<=k<j; (A(i,k) and A(k+1,j)) or (A(i,k) and B(k+1,j)) or (B(i,k) and B(k+1,j));
+ C(i,j) = ORk : i<=k<j; (B(i,k) and A(k+1,j)) or (C(i,k) and B(k+1,j)) or (C(i,k) and C(k+1,j));
+ 
+ Coste O(nLetrasDeSecuencia^2)
+ Coste memoria O(nLetrasDeSecuencia^2).
+ */
+
+
 bool colocarParentesis(std::vector<char> letras, int n)
 {
     Matriz<bool> A(n,n,false);
@@ -90,26 +132,6 @@ bool resuelveCaso()
 {
     
     
-    //  Obtener A
-    //
-    //  A(i,j)  = A(i,k) y C(k+1,j)      (A y C)    i<=k<j
-    //  A(i,j)  = B(i,k) y C(k+1,j)      (B y C)
-    //  A(i,j)  = C(i,k) y A(k+1,j)      (C y A)
-    //
-    //
-    //  Obtener B
-    //
-    //  B(i,j)  = A(i,k) y A(k+1,j)      (A y A)    i<=k<j
-    //  B(i,j)  = A(i,k) y B(k+1,j)      (A y B)
-    //  B(i,j)  = B(i,k) y B(k+1,j)      (B y B)
-    //
-    //
-    //  Obtener C
-    //
-    //  C(i,j)  = B(i,k) y A(k+1,j)      (B y A)    i<=k<j
-    //  C(i,j)  = C(i,k) y B(k+1,j)      (C y B)
-    //  C(i,j)  = C(i,k) y C(k+1,j)      (C y C)
-    //
     
     std::string linea;
     
@@ -144,4 +166,4 @@ int main()
 {
     while(resuelveCaso());
     return 0;
-}*/
+}

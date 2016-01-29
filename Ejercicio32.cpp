@@ -13,10 +13,10 @@
 
 int esfuerzo_minimo(std::vector<int> &puntosDeCorte, int nCortes, Matriz<int> &solucion)
 {
-    for ( int d = 1 ; d <nCortes; d++){
+    for ( int d = 2 ; d <= nCortes+2; d++){
         
         
-        for (int i =1; i <= nCortes-d; i++)
+        for (int i = 0; i <= nCortes+2-d; i++)
         {
             int j = i + d;
             int min = 1000001;
@@ -28,7 +28,7 @@ int esfuerzo_minimo(std::vector<int> &puntosDeCorte, int nCortes, Matriz<int> &s
         }
     }
     
-    return solucion[1][nCortes];
+    return solucion[1][nCortes+2];
 }
 
 bool resuelveCaso()
@@ -57,9 +57,11 @@ bool resuelveCaso()
         return false;
     
     
-    std::vector<int> puntosDeCorte(nCortes,0);
+    std::vector<int> puntosDeCorte(nCortes+2,0);
+    puntosDeCorte[0] = 0;
+    puntosDeCorte[nCortes+1] = longitudTablon;
     
-    for (int i = 0; i<nCortes; i++) {
+    for (int i = 1; i<=nCortes; i++) {
         int num;
         std::cin >> num;
         puntosDeCorte[i] = num;
@@ -67,7 +69,7 @@ bool resuelveCaso()
     
     
     
-    Matriz<int> solucion(nCortes+1,nCortes+1,0);
+    Matriz<int> solucion(nCortes+2,nCortes+2,0);
     
     std::cout << esfuerzo_minimo(puntosDeCorte,nCortes,solucion) << std::endl;
     

@@ -1,9 +1,18 @@
+//  TAIS08 , Rubén Gómez y Daniel Lago
 //
-//  Ejercicio27.cpp
-//  Ejercicio1
+//  Ejercicio 28 - Inserción de Paréntesis 2.
 //
-
 /*
+ Resumen de solucion:
+ Hacemos algo similar al ejercicio 27, pero en vez de tener una matriz A, B y C de booleanos tenemos las mismas matrices pero de enteros,
+ que van llevando el numero de formas de conseguir A, B y C.
+ 
+ 
+ 
+ 
+ Coste O(nLetrasDeSecuencia^2)
+ Coste memoria O(nLetrasDeSecuencia^2).
+ */
 
 #include <string>
 #include <iostream>
