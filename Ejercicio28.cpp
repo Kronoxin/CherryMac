@@ -6,6 +6,8 @@
  Resumen de solucion:
  Hacemos algo similar al ejercicio 27, pero en vez de tener una matriz A, B y C de booleanos tenemos las mismas matrices pero de enteros,
  que van llevando el numero de formas de conseguir A, B y C.
+ Hacemos el calculo del numero de formas de conseguir A sumando todas las combinaciones posibles de conseguir sus componentes.
+ Ejemplo: a = a * c; a = b * c; a = c * a;
  
  
  
@@ -49,6 +51,45 @@ void nFormasC(Matriz<int> &A , Matriz<int> &B, Matriz<int> &C , int i, int d)
     }
 }
 
+//  nFormas A
+//
+//  nFormasA(i,j) = 1                           si i=j ; xi=a .
+//  nFormasA(i,j) = 0                           si i=j ; xi=b o xi=c.
+//
+//  nFormasA(i,j)  = SumatorioX : i<=k<j:
+//                      nFormasA(i,k) * nFormasC(k+1,j)
+//                    + nFormasB(i,k) * nFormasC(k+1,j)
+//                    + nFormasC(i,k) * nFormasA(k+1,j)
+//
+//
+//  nFormas B
+//
+//  nFormasA(i,j) = 1                           si i=j ; xi=b .
+//  nFormasA(i,j) = 0                           si i=j ; xi=a o xi=c.
+//
+//  nFormasA(i,j)  =  SumatorioX : i<=k<j:
+//                      nFormasA(i,k) * nFormasA(k+1,j)
+//                    + nFormasA(i,k) * nFormasB(k+1,j)
+//                    + nFormasB(i,k) * nFormasB(k+1,j)
+//
+//
+//  nFormas C
+//
+//  nFormasA(i,j) = 1                           si i=j ; xi=c .
+//  nFormasA(i,j) = 0                           si i=j ; xi=a o xi=b.
+//
+//  nFormasA(i,j)  = SumatorioX : i<=k<j:
+//                      nFormasB(i,k) * nFormasA(k+1,j)
+//                    + nFormasC(i,k) * nFormasB(k+1,j)
+//                    + nFormasC(i,k) * nFormasC(k+1,j)
+//
+//
+// Coste O(nLetrasDeSecuencia^2)
+// Coste memoria O(nLetrasDeSecuencia^2).
+//
+
+
+
 int nFormas(std::vector<char> letras, int n)
 {
     Matriz<int> A(n,n,0);
@@ -85,39 +126,6 @@ int nFormas(std::vector<char> letras, int n)
 bool resuelveCaso()
 {
     
-    
-    //  nFormas A
-    //
-    //  nFormasA(i,j) = 1                           si i=j ; xi=a .
-    //  nFormasA(i,j) = 0                           si i=j ; xi=b o xi=c.
-    //
-    //  nFormasA(i,j)  +=  [nFormasA(i,k) * nFormasC(k+1,j) +
-    //                    + nFormasB(i,k) * nFormasC(k+1,j) +
-    //                    + nFormasC(i,k) * nFormasA(k+1,j)]
-    //
-    //
-    //  nFormas B
-    //
-    //  nFormasA(i,j) = 1                           si i=j ; xi=b .
-    //  nFormasA(i,j) = 0                           si i=j ; xi=a o xi=c.
-    //
-    //  nFormasA(i,j)  +=  [nFormasA(i,k) * nFormasA(k+1,j) +
-    //                    + nFormasA(i,k) * nFormasB(k+1,j) +
-    //                    + nFormasB(i,k) * nFormasB(k+1,j)]
-    //
-    //
-    //  nFormas C
-    //
-    //  nFormasA(i,j) = 1                           si i=j ; xi=c .
-    //  nFormasA(i,j) = 0                           si i=j ; xi=a o xi=b.
-    //
-    //  nFormasA(i,j)  +=  [nFormasB(i,k) * nFormasA(k+1,j) +
-    //                    + nFormasC(i,k) * nFormasB(k+1,j) +
-    //                    + nFormasC(i,k) * nFormasC(k+1,j)]
-    //
-    //
-    
-    
     std::string linea;
     
     std::getline(std::cin,linea);     //leemos linea a linea
@@ -148,4 +156,3 @@ int main()
     while(resuelveCaso());
     return 0;
 }
-*/

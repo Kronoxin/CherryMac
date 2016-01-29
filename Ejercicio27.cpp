@@ -87,7 +87,7 @@ void comprobarC(Matriz<bool> &A , Matriz<bool> &B, Matriz<bool> &C , int i , int
 //  C(i,j)  = C(i,k) y C(k+1,j)      (C y C)
 //
 /*
- Casos de Prueba:
+ Casos Base:
  A(i,j) = ORk : i<=k<j; (A(i,k) and C(k+1,j)) or (B(i,k) and C(k+1,j)) or (C(i,k) and A(k+1,j));
  B(i,j) = ORk : i<=k<j; (A(i,k) and A(k+1,j)) or (A(i,k) and B(k+1,j)) or (B(i,k) and B(k+1,j));
  C(i,j) = ORk : i<=k<j; (B(i,k) and A(k+1,j)) or (C(i,k) and B(k+1,j)) or (C(i,k) and C(k+1,j));

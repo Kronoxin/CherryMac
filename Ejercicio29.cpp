@@ -4,16 +4,20 @@
 //
 /*
  Resumen de solucion:
+ Tenemos que obtener el coste minimo para llegar desde i hasta j, pero debemos asegurarnos que viajar desde i hasta un k y desde k hasta j
+ tambien tenga coste mínimo.
  
  
- Coste O().
+ Coste O(nPoblados^2)
+ Coste memoria O(nPoblados^2)
+ 
  */
 
 
 #include <string>
 #include <iostream>
 #include "Matriz.h"
-/*
+
 void imprime(const Matriz<int> &a,int nPoblados){
     
     for (int i = 0 ; i< nPoblados ; i++)
@@ -33,20 +37,30 @@ void imprime(const Matriz<int> &a,int nPoblados){
     
 }
 
+/*
+    canoas(i,j) = el precio minimo que nos cuesta llegar desde i hasta j.
+    canoas(i,j) = min{ precio[i,j] , min: i<k<j { canoas(i,k) + canoas(k,j)}
+    
+    casos base:
+    canoas(i,i+1) = precio[i,i+1];
+ 
+    Coste O(nPoblados^2)
+    Coste memoria O(nPoblados^2)
+ 
+ */
+
 void canoas(const Matriz<int> &costes, int nPoblados, Matriz<int> &solucion )
 {
     for (int d = 1; d <= nPoblados-1 ; d++)
     {
         for (int i = 0; i <= nPoblados-d; i++)
         {
-            int j = i+d;
-            for (int  k = i; k <= j-1; k++)
-            {
-                solucion[i][j] = std::min(solucion[i][j] , solucion[i][k] + solucion[k][j]);
-            }
+            for (int  k = i; k <= i+d-1; k++)
+                solucion[i][i+d] = std::min(solucion[i][i+d] , solucion[i][k] + solucion[k][i+d]);
         }
     }
 }
+
 
 bool resuelveCaso()
 {
@@ -70,7 +84,8 @@ bool resuelveCaso()
              {
                  costes[i][j] = 0;
              }
-             else{
+             else
+             {
                  int c;
                  std::cin >> c;
                  costes[i][j] = c;
@@ -96,4 +111,3 @@ bool resuelveCaso()
  while(resuelveCaso());
  return 0;
  }
-*/

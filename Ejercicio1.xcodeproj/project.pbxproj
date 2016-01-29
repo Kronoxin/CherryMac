@@ -272,14 +272,14 @@
 			isa = PBXGroup;
 			children = (
 				4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */,
-				45CC00721C47F49F00CEAE13 /* Varillas.h */,
 				45AC438C1C4D49300058B781 /* Ejercicio27.cpp */,
-				45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */,
 				45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */,
+				45AC438E1C4D65BE0058B781 /* Ejercicio29.cpp */,
 				45B44AEA1C51345700B7BB9B /* Ejercicio31.cpp */,
 				45B3D2E81C57888B00BFF653 /* Ejercicio31b.cpp */,
 				45B3D2EA1C57D0EE00BFF653 /* Ejercicio32.cpp */,
 				45B3D2EC1C57E10800BFF653 /* Ejercicio34.cpp */,
+				45CC00721C47F49F00CEAE13 /* Varillas.h */,
 			);
 			name = "Tema 5 - Programación dinámica";
 			sourceTree = "<group>";
