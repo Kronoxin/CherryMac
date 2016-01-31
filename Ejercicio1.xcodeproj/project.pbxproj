@@ -23,6 +23,7 @@
 		452795CB1BFCD0650031E8A4 /* Ejercicio13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452795CA1BFCD0650031E8A4 /* Ejercicio13.cpp */; };
 		452795CD1C027D640031E8A4 /* Ejercicio14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452795CC1C027D640031E8A4 /* Ejercicio14.cpp */; };
 		452BD9581BC4FF1200413B8B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452BD9571BC4FF1200413B8B /* main.cpp */; };
+		454A761F1C5BF94E000E0024 /* 32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454A761E1C5BF94E000E0024 /* 32.cpp */; };
 		454B6A951C29500600435A41 /* Hardwood Species.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A941C29500600435A41 /* Hardwood Species.cpp */; };
 		454B6A981C296B7600435A41 /* Commandos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A971C296B7600435A41 /* Commandos.cpp */; };
 		454B6A9A1C2975C100435A41 /* Unique Snowflakes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454B6A991C2975C100435A41 /* Unique Snowflakes.cpp */; };
@@ -96,6 +97,7 @@
 		452BD9611BC4FF8E00413B8B /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
 		452BD9621BC4FF8E00413B8B /* TreeMap_AVL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_AVL.h; sourceTree = "<group>"; };
 		452BD9631BC4FF8E00413B8B /* TreeMap_RB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeMap_RB.h; sourceTree = "<group>"; };
+		454A761E1C5BF94E000E0024 /* 32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 32.cpp; sourceTree = "<group>"; };
 		454B6A941C29500600435A41 /* Hardwood Species.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Hardwood Species.cpp"; sourceTree = "<group>"; };
 		454B6A971C296B7600435A41 /* Commandos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Commandos.cpp; sourceTree = "<group>"; };
 		454B6A991C2975C100435A41 /* Unique Snowflakes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Unique Snowflakes.cpp"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		4555E7CB1C21581200F93997 /* Tema 5 - Programación dinámica */ = {
 			isa = PBXGroup;
 			children = (
+				454A761E1C5BF94E000E0024 /* 32.cpp */,
 				4555E7CC1C21582D00F93997 /* Ejercicio26.cpp */,
 				45AC438C1C4D49300058B781 /* Ejercicio27.cpp */,
 				45B44AE81C5127C600B7BB9B /* Ejercicio28.cpp */,
@@ -372,6 +375,7 @@
 				45807A551BEA5D3800B28E68 /* Ejercicio11.cpp in Sources */,
 				450358511BE111A600ED1CDA /* Ejercicio8.cpp in Sources */,
 				4555E7CD1C21582D00F93997 /* Ejercicio26.cpp in Sources */,
+				454A761F1C5BF94E000E0024 /* 32.cpp in Sources */,
 				45AC438D1C4D49300058B781 /* Ejercicio27.cpp in Sources */,
 				45059F5A1C061A440070F0AB /* Ejercicio18.cpp in Sources */,
 				454B6A9A1C2975C100435A41 /* Unique Snowflakes.cpp in Sources */,

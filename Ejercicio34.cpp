@@ -4,91 +4,34 @@
 //
 
 
-/*
+
 #include <string>
 #include <iostream>
 #include <vector>
+#include "Matriz.h"
 
 //Solución con vector
 
-bool es_par(int n){
-    
-    if(n%2 == 0)
-        return true;
-    else
-        return false;
-}
 
-int maximizar_comida(std::vector<int> &cubos, int nCubos, int &extremoIzq, int &extremoDrch){
-    int sumaPares = 0;
-    int sumaImpares = 0;
+int maximizar_comida(std::vector<int> &cubos, int nCubos, Matriz<int> &solucion){
+    int acumulado  = 0;
     
-    //PARES SEGUN LAS POSICIONES DEL VECTOR, elemento 0 impar, elemento 1 par.
-    for (int i = 0; i< nCubos; i++) {
-        if(es_par(i)){
-            sumaImpares += cubos[i];
-        }
-        else{
-            sumaPares += cubos[i];
-        }
-    }
-    
-    int acumulado = 0;
-    
-    while (extremoIzq < extremoDrch) {
-        if(sumaImpares >= sumaPares){
+    for (int d = 2; d<=nCubos; d++) {
+        for (int i = 0; i<nCubos-d; i++) {
+            int j = i + d;
             
-            //como por impar
-            if(es_par(extremoIzq)){
-                
-                acumulado += cubos[extremoIzq];
-                sumaImpares -= cubos[extremoIzq];
-                extremoIzq++;
+            int izquierda =0;
+            int derecha =0;
+            
+            if(cubos[i] > cubos[j-1])
+            {
+                derecha =cubos[i] + solucion[i+1][j-1];
             }
-            else{
-                acumulado += cubos[extremoDrch];
-                sumaImpares -= cubos[extremoDrch];
-                extremoDrch--;
-                
+            else
+            {
+                derecha = cubos[j] + solucion
             }
             
-        }
-        else{
-            //como por par
-            if(es_par(extremoIzq)){
-                
-                acumulado += cubos[extremoDrch];
-                sumaPares -= cubos[extremoDrch];
-                extremoDrch--;
-            }
-            else{
-                acumulado += cubos[extremoIzq];
-                sumaPares -= cubos[extremoIzq];
-                extremoIzq++;
-            }
-        }
-        //come la otra vaca
-        
-        if(cubos[extremoIzq] >= cubos[extremoDrch]){
-            //come el más grande, en este caso, por la izquierda
-            
-            if(es_par(extremoIzq)){
-                sumaImpares -= cubos[extremoIzq];
-            }
-            else{
-                sumaPares -= cubos[extremoIzq];
-            }
-        }
-        else{
-            //come por la derecha
-            
-            if(es_par(extremoDrch)){
-                sumaImpares -= cubos[extremoDrch];
-            }
-            else{
-                sumaPares -= cubos[extremoDrch];
-            }
-            extremoDrch--;
         }
     }
     
@@ -115,10 +58,12 @@ bool resuelveCaso()
         std::cin >> num;
         cubos[i] = num;
     }
-    int extremoIzq = 0;
-    int extremoDrch = nCubos-1;
+    
+    Matriz<int> solucion(nCubos,nCubos,0);
+    
+
     int resultado = maximizar_comida(cubos,nCubos,extremoIzq,extremoDrch);
-    std::cout << resultado << " " << extremoIzq << " " << extremoDrch << std::endl;
+    std::cout << resultado << " " << std::endl;
     
     
     return true;
@@ -131,4 +76,3 @@ int main()
     while(resuelveCaso());
     return 0;
 }
-*/
